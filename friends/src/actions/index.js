@@ -16,12 +16,9 @@ export const ADD_FRIEND_FAILURE = "ADD_FRIEND_FAILURE";
 
 export const getFriends = () => dispatch => {
     dispatch({ type: FETCHING_FREINDS_START });
-    console.log("fetching")
     axiosImproved().get('http://localhost:5000/api/friends')
         .then(res => {
             dispatch({ type: FETCHING_FREINDS_SUCCESS, payload: res.data });
-            console.log('data')
-            console.log(res.data)
         })
         .catch(err => {
             dispatch({ type: FETCHING_FRIENDS_FAILURE, paylod: err });

@@ -7,7 +7,6 @@ import FriendList from '../components/FriendsList';
 export class FriendListView extends React.Component{
 
     componentDidMount() {
-        console.log('PROPS', this.props);
             this.props.getFriends();
     };
 
@@ -41,8 +40,7 @@ export class FriendListView extends React.Component{
 };
 
 const mapStateToProps = state => {
-    console.log('state')
-    console.log(state)
+    // console.log(state)
     return {
         friends: state.friendsReducer.friends,
         fetchingFriends: state.friendsReducer.fetchingFriends,
