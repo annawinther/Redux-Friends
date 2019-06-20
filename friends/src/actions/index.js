@@ -12,13 +12,10 @@ export const ADD_FRIEND_SUCCESS = "ADD_FRIEND_SUCCESS";
 export const ADD_FRIEND_FAILURE = "ADD_FRIEND_FAILURE";
 
 
-
-
 //ACTION CREATORS
 
 export const getFriends = () => dispatch => {
     dispatch({ type: FETCHING_FREINDS_START });
-
     axiosImproved().get('http://localhost:5000/api/friends')
         .then(res => {
             dispatch({ type: FETCHING_FREINDS_SUCCESS, payload: res.data });
@@ -45,7 +42,7 @@ export const login = (username, password) => (dispatch) => {
 
     axios.post('http://localhost:5000/api/login', credentials)
         .then(res => {
-            localStorage.getItem('token', res.data.token)
+            localStorage.setItem('token', res.data.payload)
         })
         .catch(err => {
             console.log("Auth failed")

@@ -12,6 +12,7 @@ export class Login extends React.Component {
         const password = this.passRef.current.value;
 
         this.props.login(username, password);
+
     }
 
     render() {
@@ -27,6 +28,6 @@ export class Login extends React.Component {
 }
 
 export default connect(
-    state => state,
+     null,
     { login }
 )(Login);

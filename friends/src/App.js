@@ -6,7 +6,7 @@ import FriendListView from './views/FriendListView';
 function App() {
   return (
     <div className="App">
-      <FriendListView/>
+      <FriendListView />
       <Login />
     </div>
   );

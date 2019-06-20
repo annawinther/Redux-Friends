@@ -8,9 +8,7 @@ export class FriendListView extends React.Component{
 
     componentDidMount() {
         console.log('PROPS', this.props);
-        if (this.props.FriendList.lenght === 0){
             this.props.getFriends();
-        }
     };
 
     render() {
