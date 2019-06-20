@@ -10,19 +10,21 @@ function App() {
     <div className="App">
         <BrowserRouter>
           <Route 
-          exact path='/'
-          render={() => {
-            if (localStorage.getItem('token')){
-              return (
-              <FriendListView />
-              );
-            };
-            return <Redirect to="login" />
-          }} />
+            exact path='/'
+            render={() => {
+              if (localStorage.getItem('token')){
+                return (
+                <FriendListView />
+                );
+              };
+              return <Redirect to="login" />
+            }} 
+            />
 
-          <Route path='/login' component={Login} />
-          {/* <Login /> */}
-         
+          <Route 
+            path='/login'
+            component={Login}
+            />
         </BrowserRouter>
     </div>
   );
