@@ -12,10 +12,10 @@ export class FriendListView extends React.Component{
     };
 
     render() {
-        if (this.props.getFriends){
+        if (this.props.fetchingFriends){
             return (
                 <div>
-                    <h3>Fetching your firends, please wait...</h3>
+                    <h3>Fetching your friends, please wait...</h3>
                 </div>
             )
         }
@@ -29,17 +29,27 @@ export class FriendListView extends React.Component{
 
         return (
             <div>
-                <FriendList {...this.props} />
+                <FriendList 
+                friends={this.props.friends}
+                fetchingFriends={this.props.fetchingFriends}
+
+                getFriends={this.props.getFriends}
+                />
             </div>
         );
     }
 };
 
 const mapStateToProps = state => {
+    console.log('state')
     console.log(state)
     return {
         friends: state.friendsReducer.friends,
-        getFriends: state.friendsReducer.getFriends,
+        fetchingFriends: state.friendsReducer.fetchingFriends,
+        // friendsFetched: state.friendsReducer.friendsFetched,
+        // addingFriend: state.friendsReducer.addingFriend,
+        // friendsSaved: state.friendsReducer.friendsSaved,
+        // savingFriends: state.friendsReducer.savingFriends,
         error: state.friendsReducer.error,
     }
 }
