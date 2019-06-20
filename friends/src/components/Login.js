@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { login } from '../actions';
+// username: 'Lambda School', password: 'i<3Lambd4' 
 
 export class Login extends React.Component {
     userRef = React.createRef();
