@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from '../state/actionCreators';
+import { login } from '../actions';
 
 export class Login extends React.Component {
     userRef = React.createRef();
@@ -19,6 +19,7 @@ export class Login extends React.Component {
                 <h3>Log In Here</h3>
                 <div>Username <input type="text" ref={this.userRef} /></div>
                 <div>Password <input type="text" ref={this.passRef} /></div>
+                <button onClick={this.onLogin}>Log In</button>
             </div>
         )
     }
