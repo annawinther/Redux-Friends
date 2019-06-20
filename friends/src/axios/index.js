@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export default function () {
+export default function axiosImproved () {
+  debugger;
     const token = localStorage.getItem('token')
     ? localStorage.getItem('token')
     : 'false'
