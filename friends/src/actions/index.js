@@ -12,9 +12,9 @@ export const ADD_FRIEND_SUCCESS = "ADD_FRIEND_SUCCESS";
 export const ADD_FRIEND_FAILURE = "ADD_FRIEND_FAILURE";
 
 
+
+
 //ACTION CREATORS
-
-
 
 export const getFriends = () => dispatch => {
     dispatch({ type: FETCHING_FREINDS_START });

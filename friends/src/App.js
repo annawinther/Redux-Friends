@@ -1,13 +1,13 @@
 import React from 'react';
 import Login from './components/Login';
 import './App.css';
-import FriendList from './components/FriendsList';
+import FriendListView from './views/FriendListView';
 
 function App() {
   return (
     <div className="App">
-      <FriendList />
-     <Login />
+      <FriendListView/>
+      <Login />
     </div>
   );
 }
