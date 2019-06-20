@@ -4,8 +4,8 @@ const Friend = props => {
     return (
         <div>
             <h3>Name: {props.friend.name}</h3>
-            <h3>Age: {props.friend.age}</h3>
-            <h3>Email: {props.friend.email}</h3>
+            <h4>Age: {props.friend.age}</h4>
+            <h4>Email: {props.friend.email}</h4>
         </div>
     )
 }
